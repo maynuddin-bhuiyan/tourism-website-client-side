@@ -1,4 +1,4 @@
-.Tourist{
+.Tourist {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
@@ -6,9 +6,9 @@
 }
 
 
-h1{
+h1 {
     color: rgb(155, 82, 48);
     font-weight: 800;
     font-size: 50px;
     margin: 50px;
-  }
+}

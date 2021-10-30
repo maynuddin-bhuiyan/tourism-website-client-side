@@ -2,29 +2,29 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
-const PrivateRouter = ({children, ...rest}) => {
+const PrivateRouter = ({ children, ...rest }) => {
 
-    const {user , isLoading}= useAuth()
+    const { user, isLoading } = useAuth()
 
-   if(isLoading) {
-       return "loading"
-   }
+    if (isLoading) {
+        return "loading"
+    }
 
     return (
         <div>
-                     
-           <Route
-            {...rest}
-            
-            render={({ location }) => user.email ? children : <Redirect
-                to={{
-                    pathname: "/Manage",
-                    state: { from: location }
-                }}
-            ></Redirect>}
-        >
 
-        </Route>
+            <Route
+                {...rest}
+
+                render={({ location }) => user.email ? children : <Redirect
+                    to={{
+                        pathname: "/Manage",
+                        state: { from: location }
+                    }}
+                ></Redirect>}
+            >
+
+            </Route>
         </div>
     );
 };

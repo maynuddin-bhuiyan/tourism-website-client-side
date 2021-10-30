@@ -1,8 +1,10 @@
-body{
+body {
   background: rgb(47, 47, 48);
   font-family: 'Courier New', Courier, monospace;
-};
+}
 
-.App h1{
+
+
+.App h1 {
   color: rgb(128, 65, 36);
 }

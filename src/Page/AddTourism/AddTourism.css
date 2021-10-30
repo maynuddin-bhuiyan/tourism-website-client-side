@@ -1,5 +1,9 @@
+/* AddTourisom Css Part */
 
-.images img{
+
+
+
+.images img {
     width: 500px;
     margin-left: 100px;
 }
@@ -10,10 +14,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 100px;
-    
+
 }
 
-form input{
+form input {
     width: 40%;
     color: rgb(58, 54, 52);
     margin: 20px;

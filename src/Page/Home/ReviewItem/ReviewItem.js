@@ -4,11 +4,11 @@ import './ReviewItem.css';
 
 
 const ReviewItem = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const [tourist, setTourist] = useState([]);
 
     const [specialItam, setspecialItam] = useState([]);
-   
+
     useEffect(() => {
         fetch(`http://localhost:9000/tourist`)
             .then(res => res.json())
@@ -23,36 +23,36 @@ const ReviewItem = () => {
 
 
 
-    useEffect( () => {
+    useEffect(() => {
 
-        if(tourist.length>0){
+        if (tourist.length > 0) {
             const matchItam = tourist.find(tourist => tourist._id == id)
             setspecialItam(matchItam);
         }
 
-        
+
 
     }, [tourist]);
 
 
 
 
-   
+
     return (
         <div>
-             <h1>Your Packages</h1>
+            <h1>Your Packages</h1>
             <div className="product">
-               
-            <div>
-              <h3>{specialItam.name} </h3>
-              <h4>{specialItam.title}</h4>
-              <img src={specialItam.img} alt="" />
 
-              <Link to="/ManageOrders" className='Button'>Packages</Link>
-                
-               
+                <div>
+                    <h3>{specialItam.name} </h3>
+                    <h4>{specialItam.title}</h4>
+                    <img src={specialItam.img} alt="" />
+
+                    <Link to="/ManageOrders" className='Button'>Packages</Link>
+
+
+                </div>
             </div>
-        </div>
         </div>
     );
 };
