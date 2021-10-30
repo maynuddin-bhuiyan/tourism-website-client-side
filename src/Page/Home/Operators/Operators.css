@@ -1,0 +1,16 @@
+.Partnens-Full{
+    background: black;
+    padding: 80px;
+}
+
+
+
+
+.Partnens img{
+    width: 150px;
+    background: rgb(54, 31, 31);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}

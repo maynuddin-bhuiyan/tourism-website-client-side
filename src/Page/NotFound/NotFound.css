@@ -1,0 +1,13 @@
+.NotFound img {
+    width: 900px;
+    padding: 50px;
+}
+
+.Found{
+    color: brown;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 50px;
+    
+}
+
