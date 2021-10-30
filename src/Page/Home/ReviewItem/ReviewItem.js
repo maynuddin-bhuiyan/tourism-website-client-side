@@ -10,7 +10,7 @@ const ReviewItem = () => {
     const [specialItam, setspecialItam] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:9000/tourist`)
+        fetch(`https://hidden-sea-62694.herokuapp.com/tourist`)
             .then(res => res.json())
             .then(data => {
                 setTourist(data);

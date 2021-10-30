@@ -12,7 +12,7 @@ const googleProvider = new GoogleAuthProvider();
 
 
 const Tourist = (props) => {
-  const { name, Price, img, _id, degeneration } = props.touris;
+  const { name, price, img, _id, degeneration } = props.touris;
 
   const history = useHistory();
   const auth = getAuth();
@@ -53,15 +53,15 @@ const Tourist = (props) => {
 
   return (
     <>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={img} />
+      <Card style={{ width: '400px'}}>
+        <Card.Img variant="top" src={img} style={{ height: '300px'}} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
 
           <Card.Text>
             {degeneration}
           </Card.Text>
-          <h2>{Price}<span>$</span></h2>
+          <h2>{price}<span>$</span></h2>
           <Button
             onClick={
               () => {

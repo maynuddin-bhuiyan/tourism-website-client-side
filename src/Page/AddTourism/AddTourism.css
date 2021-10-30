@@ -17,6 +17,19 @@
 
 }
 
+
+textarea {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    width: 550px;
+    height: 100px;
+    padding: 20px;
+    font-size: 18px;
+    color: #000;
+    border-radius: 10px;
+}
+
 form input {
     width: 40%;
     color: rgb(58, 54, 52);
