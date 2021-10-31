@@ -1,12 +1,20 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import useAuth from '../../Context/useAuth';
+import './Login.css';
 
-const login = () => {
+
+
+
+const Login = () => {
+
+    const { signInGoogle } = useAuth();
+
     return (
-        <div>
-            <Button>Google Sign In</Button>
+        <div className='Login'>
+            <Button onClick={signInGoogle}>Log In With Google</Button>
         </div>
     );
 };
 
-export default login;
+export default Login;

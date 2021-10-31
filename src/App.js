@@ -9,6 +9,10 @@ import AddTourism from './Page/AddTourism/AddTourism';
 import NotFound from './Page/NotFound/NotFound';
 import ReviewItem from './Page/Home/ReviewItem/ReviewItem';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRouter from './Page/PrivateRouter/PrivateRouter';
+import Login from './Page/Login/Login';
+
+
 
 function App() {
   return (
@@ -35,10 +39,14 @@ function App() {
             </Route>
 
 
-
-            <Route path='/Manage/:id'>
-              <ReviewItem></ReviewItem>
+            <Route path='/login'>
+              <Login></Login>
             </Route>
+
+
+            <PrivateRouter path='/Manage/:id'>
+              <ReviewItem></ReviewItem>
+            </PrivateRouter>
 
             <Route exact path='*'>
               <NotFound></NotFound>

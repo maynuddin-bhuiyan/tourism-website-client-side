@@ -1,0 +1,12 @@
+.Login {
+    padding: 100px;
+}
+
+.Login Button {
+    padding: 20px;
+    margin-left: 600px;
+    font-size: 20px;
+    font-weight: 700;
+    color: darkgoldenrod;
+    background: darkgray;
+}

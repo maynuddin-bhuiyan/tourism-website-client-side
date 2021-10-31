@@ -1,40 +1,19 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { useHistory, useLocation } from 'react-router-dom';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import initializeAutcntion from '../../../Firebase/firebase.init';
-import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+
 import './Tourist.css';
 
-initializeAutcntion();
-
-const googleProvider = new GoogleAuthProvider();
 
 
 const Tourist = (props) => {
   const { name, price, img, _id, degeneration } = props.touris;
 
   const history = useHistory();
-  const auth = getAuth();
-  const [setuser] = useState({});
 
 
-  const historyData = useHistory();
-  const location = useLocation();
 
-  const url = location.state?.from || "/Home";
-
-
-  const handleGoogleSignIn = () => {
-
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setuser(result.user);
-        historyData.push(url)
-
-      }).catch((err) => console.log(err))
-
-  }
 
 
 
@@ -53,8 +32,8 @@ const Tourist = (props) => {
 
   return (
     <>
-      <Card style={{ width: '400px'}}>
-        <Card.Img variant="top" src={img} style={{ height: '300px'}} />
+      <Card style={{ width: '400px' }}>
+        <Card.Img variant="top" src={img} style={{ height: '300px' }} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
 
@@ -65,7 +44,7 @@ const Tourist = (props) => {
           <Button
             onClick={
               () => {
-                handleGoogleSignIn();
+
                 handleAddedItam(_id);
 
 

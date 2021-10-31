@@ -2,7 +2,7 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import './ManageOrders.css';
-import images from '../../images/imagesa.png';
+import images from '../../images/manneg.png';
 
 
 const ManageOrders = () => {
@@ -19,7 +19,7 @@ const ManageOrders = () => {
 
             <div className="From-full">
                 <div className="From">
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form className='fromer' onSubmit={handleSubmit(onSubmit)}>
                         <Form>
                             <Form.Control placeholder="First name" />
                             <Form.Control placeholder="Last name" />
